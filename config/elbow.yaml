@@ -1,18 +1,19 @@
 calibrated: 1
 equilibrium:
-    sign: -1
+    sign: 1
     signFlexor: 1
-    signExtensor: -1
+    signExtensor: 1
     nameFlexor: "biceps"
     nameExtensor: "triceps"
     servoRange: 6.2832
     servoOffset: 0.0
+    loadLimit: 0.5  # Testing limitLoad method in equilibrium_model.py.
 signEncoder: 1
 signJoint: 1
 name: "elbow"
 nameEncoder: "elbow_encoder"
-minAngle: -0.75
-maxAngle: 0.35
+minAngle: -1.7
+maxAngle: 0.47
 maxAbsForwardError: 0.7
 gains:
     P: 0.04

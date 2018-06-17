@@ -8,23 +8,23 @@
                 gummi_d:
                     <!-- Equivalent to /dev/ttyUSB1 can be find at /dev/serial/by-id -->
                     port_name: "/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052NDS-if00-port0"
-                    baud_rate: 1000000
+                    baud_rate: 500000
                     min_motor_id: 1
-                    max_motor_id: 50
+                    max_motor_id: 60
                     update_rate: 1
                 gummi_ae:
                     <!-- Equivalent to /dev/ttyUSB0 can be find at /dev/serial/by-id -->
                     port_name: "/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052RCN-if00-port0"
                     baud_rate: 1000000
                     min_motor_id: 1
-                    max_motor_id: 50
+                    max_motor_id: 60
                     update_rate: 100
                 gummi_se:
                     <!-- Equivalent to /dev/ttyUSB0 can be find at /dev/serial/by-id -->
                     port_name: "/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL02L1KJ-if00-port0"
                     baud_rate: 1000000
                     min_motor_id: 1
-                    max_motor_id: 50
+                    max_motor_id: 60
                     update_rate: 100
         </rosparam>
     </node>
