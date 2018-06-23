@@ -11,7 +11,7 @@
                     baud_rate: 500000
                     min_motor_id: 1
                     max_motor_id: 60
-                    update_rate: 5
+                    update_rate: 1
                 gummi_ae:
                     <!-- Equivalent to /dev/ttyUSB0 can be find at /dev/serial/by-id -->
                     port_name: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AI0284F3-if00-port0 <!-- "/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052RCN-if00-port0" -->
