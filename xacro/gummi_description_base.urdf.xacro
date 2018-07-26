@@ -2,7 +2,7 @@
 <robot>
   <link
     name="base_link">
-    <inertial>
+    <!-- <inertial>
       <origin
         xyz="-9.81410393552373E-06 -0.0460000689343235 -0.0065295158451983"
         rpy="0 0 0" />
@@ -15,14 +15,14 @@
         iyy="3.79746167195594E-05"
         iyz="-1.48426357415501E-05"
         izz="5.80238931250525E-06" />
-    </inertial>
+    </inertial> -->
     <visual>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/base_link.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/base_Link.STL" />
       </geometry>
       <material
         name="">
@@ -36,7 +36,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/base_link.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/base_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -62,7 +62,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/shoulder_preroll.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j1_Link.stl" />
       </geometry>
       <material
         name="">
@@ -76,7 +76,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/shoulder_preroll.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j1_Link.stl" />
       </geometry>
     </collision>
   </link>
@@ -120,7 +120,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/shoulder.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j2_Link.stl" />
       </geometry>
       <material
         name="">
@@ -134,7 +134,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/shoulder.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j2_Link.stl" />
       </geometry>
     </collision>
   </link>
@@ -178,7 +178,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/upperarm_preroll.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j3_Link.stl" />
       </geometry>
       <material
         name="">
@@ -192,7 +192,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/upperarm_preroll.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j3_Link.stl" />
       </geometry>
     </collision>
   </link>
@@ -236,7 +236,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/upperarm.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j4_Link.stl" />
       </geometry>
       <material
         name="">
@@ -250,7 +250,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/upperarm.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j4_Link.stl" />
       </geometry>
     </collision>
   </link>
@@ -294,7 +294,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/lowerarm_preroll_u.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j5_Link.stl" />
       </geometry>
       <material
         name="">
@@ -308,7 +308,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/lowerarm_preroll_u.STL" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j5_Link.stl" />
       </geometry>
     </collision>
   </link>
