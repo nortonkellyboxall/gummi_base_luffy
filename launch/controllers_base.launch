@@ -35,28 +35,28 @@
     <rosparam file="$(eval find('gummi_base_' + base) + '/dynamixel/shoulder_abductor.yaml')" command="load"/>
     <node name="shoulder_abductor_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_se
           	shoulder_abductor_controller"
           output="screen"/>
 
     <rosparam file="$(eval find('gummi_base_' + base) + '/dynamixel/shoulder_adductor.yaml')" command="load"/>
     <node name="shoulder_adductor_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_se
                 shoulder_adductor_controller"
           output="screen"/>
 
     <rosparam file="$(eval find('gummi_base_' + base) + '/dynamixel/horizontal_abductor.yaml')" command="load"/>
     <node name="horizontal_abductor_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_se
                 horizontal_abductor_controller"
           output="screen"/>
 
     <rosparam file="$(eval find('gummi_base_' + base) + '/dynamixel/horizontal_adductor.yaml')" command="load"/>
     <node name="horizontal_adductor_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_se
                 horizontal_adductor_controller"
           output="screen"/>
 
@@ -70,28 +70,28 @@
     <rosparam file="$(eval find('gummi_base_' + base) + '/dynamixel/shoulder_flexor.yaml')" command="load"/>
     <node name="shoulder_flexor_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_se
                 shoulder_flexor_controller"
           output="screen"/>
 
     <rosparam file="$(eval find('gummi_base_' + base) + '/dynamixel/shoulder_extensor.yaml')" command="load"/>
     <node name="shoulder_extensor_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_se
                 shoulder_extensor_controller"
           output="screen"/>
 
     <rosparam file="$(eval find('gummi_base_' + base) + '/dynamixel/shoulder_roll_encoder.yaml')" command="load"/>
     <node name="shoulder_roll_encoder_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_se
+                --port gummi_ae
                 shoulder_roll_encoder_controller"
           output="screen"/>
 
     <rosparam file="$(eval find('gummi_base_' + base) + '/dynamixel/shoulder_yaw_encoder.yaml')" command="load"/>
     <node name="shoulder_yaw_encoder_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_se
+                --port gummi_ae
                 shoulder_yaw_encoder_controller"
           output="screen"/>
 
