@@ -7,7 +7,7 @@ velocity_control: 0
 joints:
   shoulder_yaw:
     effort: 0.4
-    gradual_startup_position: 0
+    gradual_startup_position: 0.5
     gradual_startup_time: 1.0
     antagonist: True
   shoulder_roll:
@@ -17,12 +17,12 @@ joints:
     antagonist: True
   shoulder_pitch:
     effort: 0.6
-    gradual_startup_position: 0.25
+    gradual_startup_position: 1
     gradual_startup_time: 1.0
     antagonist: True
   elbow:
     effort: 0.001
-    gradual_startup_position: 2.0
+    gradual_startup_position: 0.25
     gradual_startup_time: 1.0
     antagonist: True
   # antagonist: False => direct driven joint

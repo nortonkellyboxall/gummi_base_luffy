@@ -22,7 +22,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/base_Link.stl" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/base_Link1.stl" />
       </geometry>
       <material
         name="">
@@ -36,7 +36,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/base_Link.stl" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/base_Link1.stl" />
       </geometry>
     </collision>
   </link>
@@ -143,13 +143,13 @@
     type="revolute">
     <origin
       xyz="0 -0.065 0.1265"
-      rpy="1.57 0 0" />
+      rpy="-1.57 3.16 0" />
     <parent
       link="shoulder_preroll" />
     <child
       link="shoulder" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 0 -1" />
     <limit
       lower="-0.95"
       upper="2.3"
@@ -200,14 +200,14 @@
     name="shoulder_pitch"
     type="revolute">
     <origin
-      xyz="-0.024 -0.17679 8.6827E-05"
-      rpy="0 0 0" />
+      xyz="-0.019 0 -0.054"
+      rpy="-1.57 0 1.57" />
     <parent
       link="shoulder" />
     <child
       link="upperarm_preroll" />
     <axis
-      xyz="-1 0 0" />
+      xyz="0 0 -1" />
     <limit
       lower="-0.15"
       upper="1.1"
@@ -258,14 +258,14 @@
     name="upperarm_roll"
     type="revolute">
     <origin
-      xyz="0.056992 -0.010088 -0.035587"
-      rpy="0 0 0" />
+      xyz="-0.0355 0.00999 0.0145"
+      rpy="-1.57 0 -1.57" />
     <parent
       link="upperarm_preroll" />
     <child
       link="upperarm" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
       lower="-1.56"
       upper="1.56"
@@ -294,7 +294,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j5_Link.stl" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/lowerarm_preroll_u.stl" />
       </geometry>
       <material
         name="">
@@ -308,7 +308,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/j5_Link.stl" />
+          filename="package://gummi_base_$(env ROS_GUMMI_BASE)/meshes/lowerarm_preroll_u.stl" />
       </geometry>
     </collision>
   </link>
@@ -316,14 +316,14 @@
     name="elbow"
     type="revolute">
     <origin
-      xyz="-0.006 0.0184 -0.23533"
-      rpy="0 0 0" />
+      xyz="-0.0212 0.003 -0.2338"
+      rpy="3.16 1.57 0" />
     <parent
       link="upperarm" />
     <child
       link="lowerarm_preroll_u" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 0 1" />
     <limit
       lower="-0.75"
       upper="0.35"
@@ -331,7 +331,7 @@
       velocity="0" />
   </joint>
 
-  <link
+  <!-- <link
     name="upperarm_biceps_pulley">
     <inertial>
       <origin
@@ -654,5 +654,5 @@
       link="shoulder_pitch_back_pulley" />
     <axis
       xyz="0 0 0" />
-  </joint>
+  </joint> -->
 </robot>

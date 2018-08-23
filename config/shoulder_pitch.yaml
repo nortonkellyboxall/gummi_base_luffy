@@ -6,14 +6,14 @@ equilibrium:
     nameFlexor: "shoulder_adductor"
     nameExtensor: "shoulder_abductor"
     servoRange: 6.2832
-    servoOffset: 0.3
+    servoOffset: 0
     loadLimit: 0.5  # Testing limitLoad method in equilibrium_model.py.
-signEncoder: -1
+signEncoder: 1
 signJoint: 1
 name: "shoulder_pitch"
 nameEncoder: "shoulder_pitch_encoder"
 minAngle: -0.05
-maxAngle: 1.1
+maxAngle: 1.3
 maxAbsForwardError: 0.25
 gains:
     P: 0.065

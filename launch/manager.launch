@@ -7,24 +7,24 @@
             serial_ports:
                 gummi_d:
                     <!-- Equivalent to /dev/ttyUSB1 can be find at /dev/serial/by-id -->
-                    port_name: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT1YEVHT-if00-port0 <!--/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052NDS-if00-port0" -->
-                    baud_rate: 500000
-                    min_motor_id: 1
-                    max_motor_id: 60
-                    update_rate: 1
+                    port_name: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL02L1KS-if00-port0 <!--/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052NDS-if00-port0" -->
+                    baud_rate: 1000000
+                    min_motor_id: 12
+                    max_motor_id: 24
+                    update_rate: 100
                 gummi_ae:
                     <!-- Equivalent to /dev/ttyUSB0 can be find at /dev/serial/by-id -->
-                    port_name: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT1YCG2E-if00-port0 <!-- "/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052RCN-if00-port0" -->
+                    port_name: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT1SF2VT-if00-port0 <!-- "/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052RCN-if00-port0" -->
                     baud_rate: 1000000
                     min_motor_id: 1
-                    max_motor_id: 60
+                    max_motor_id: 25
                     update_rate: 100
                 gummi_se:
                     <!-- Equivalent to /dev/ttyUSB0 can be find at /dev/serial/by-id -->
-                    port_name: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT1YCJTW-if00-port0 <!--"/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL02L1KJ-if00-port0"-->
+                    port_name: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL03ENF4-if00-port0 <!--"/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL02L1KJ-if00-port0"-->
                     baud_rate: 1000000
                     min_motor_id: 1
-                    max_motor_id: 60
+                    max_motor_id: 8
                     update_rate: 100
         </rosparam>
     </node>
