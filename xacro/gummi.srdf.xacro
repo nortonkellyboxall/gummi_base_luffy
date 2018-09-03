@@ -14,6 +14,7 @@
   <!-- Including the xacro files from base and end effector that containg the macros for each part of the srdf -->
   <xacro:include filename="$(arg base)/xacro/gummi_base.srdf.xacro" />
   <xacro:include filename="$(arg ee)/xacro/gummi_ee.srdf.xacro" />
+  <xacro:include filename="$(arg twodofhead)/xacro/gummi_head.srdf.xacro" />
     <group name="right_arm">
       <xacro:group_right_arm_base />
         <xacro:group_right_arm_ee />
@@ -27,5 +28,6 @@
     <xacro:virtual_joints_base />
     <xacro:disable_collisions_base />
     <xacro:disable_collisions_ee />
+    <xacro:disable_collisions_head />
     <xacro:disable_collisions_mixed />
 </robot>

@@ -4,4 +4,5 @@
 
 <xacro:include filename="$(arg base)/xacro/gummi_description_base.urdf.xacro" />
 <xacro:include filename="$(arg ee)/xacro/gummi_description_ee.urdf.xacro" />
+<xacro:include filename="$(arg twodofhead)/xacro/gummi_description_head.urdf.xacro" />
 </robot>

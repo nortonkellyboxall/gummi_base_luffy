@@ -10,7 +10,7 @@
                     port_name: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL02L1KS-if00-port0 <!--/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052NDS-if00-port0" -->
                     baud_rate: 1000000
                     min_motor_id: 12
-                    max_motor_id: 24
+                    max_motor_id: 101
                     update_rate: 100
                 gummi_ae:
                     <!-- Equivalent to /dev/ttyUSB0 can be find at /dev/serial/by-id -->
