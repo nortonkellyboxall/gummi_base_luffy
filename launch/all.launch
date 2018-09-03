@@ -5,4 +5,7 @@
   </include>
   <include file="$(eval find('gummi_base_' + base) + '/launch/controllers.launch')">
   </include>
+
+  <!-- <include file="$(find realsense2_camera)/launch/rs_rgbd.launch">
+  </include> -->
 </launch>

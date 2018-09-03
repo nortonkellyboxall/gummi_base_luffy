@@ -15,9 +15,10 @@ echo "** Creating combine YAML files from gummi_ee and gummi_base."
 export SRCPATH=${PWD}/..
 export GUMMIBASEPATH=${SRCPATH}/gummi_base_${ROS_GUMMI_BASE}
 export GUMMIEEPATH=${SRCPATH}/gummi_ee_${ROS_GUMMI_EE}
-
+export GUMMIHEADPATH=${SRCPATH}/two_dof_head
 # LIST OF GENERATED YAML FILES AS:
 #
 # ./scripts/yaml_gen_.py <base.yaml> <ee.yaml> <combined.yaml>
 
-./scripts/yaml_gen_.py ${GUMMIBASEPATH}/config/gummi_base.yaml ${GUMMIEEPATH}/config/gummi_ee.yaml ${GUMMIBASEPATH}/config/gummi.yaml
+./scripts/yaml_gen_.py ${GUMMIBASEPATH}/config/gummi_base.yaml ${GUMMIEEPATH}/config/gummi_ee.yaml ${GUMMIBASEPATH}/config/gummi_1.yaml
+./scripts/yaml_gen_.py ${GUMMIBASEPATH}/config/gummi_1.yaml ${GUMMIHEADPATH}/config/gummi_two_dof_head.yaml ${GUMMIBASEPATH}/config/gummi.yaml

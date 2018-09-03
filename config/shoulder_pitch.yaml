@@ -13,7 +13,7 @@ signJoint: 1
 name: "shoulder_pitch"
 nameEncoder: "shoulder_pitch_encoder"
 minAngle: -0.05
-maxAngle: 1.3
+maxAngle: 1.57
 maxAbsForwardError: 0.25
 gains:
     P: 0.065
