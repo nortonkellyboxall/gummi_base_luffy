@@ -8,6 +8,6 @@
     <include file="$(eval find('gummi_ee_' + ee) + '/launch/controllers_ee.launch')">
        <!--arg name="ee" value="$(arg ee)"/-->
     </include>
-    <include file="$(find two_dof_head)/launch/controllers_head.launch">
+    <include file="$(find gummi_head_twodof)/launch/controllers_head.launch">
     </include>
 </launch>
