@@ -10,6 +10,16 @@ controller_list:
       - elbow
       - forearm_roll
       - wrist_pitch
-  # - name: fake_right_gripper_controller
+      - head_yaw
+      - head_pitch
+  
+  - name: head_joint_trajectory_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - head_yaw
+      - head_pitch
+    
+        # - name: fake_right_gripper_controller
     # joints:
       # - gripper
