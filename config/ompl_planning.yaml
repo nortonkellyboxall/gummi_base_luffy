@@ -177,7 +177,7 @@ head:
   projection_evaluator: joints(head_yaw,head_pitch)
   longest_valid_segment_fraction: 0.005
 
-right_gripper:
+pointer:
   planner_configs:
     - SBLkConfigDefault
     - ESTkConfigDefault

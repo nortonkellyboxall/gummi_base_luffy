@@ -51,6 +51,16 @@
   <disable_collisions link1="lowerarm_preroll_u" link2="upperarm" reason="Adjacent" />
   <disable_collisions link1="lowerarm_preroll_u" link2="upperarm_preroll" reason="Never" />
   <disable_collisions link1="lowerarm_preroll_u" link2="lowerarm_preroll_d" reason="Adjacent" />
+  <disable_collisions link1="head_pitch" link2="pointer" reason="Never" />
+  <disable_collisions link1="head_yaw" link2="pointer" reason="Never" />
+  <disable_collisions link1="lowerarm" link2="pointer" reason="Never" />
+  <disable_collisions link1="lowerarm_preroll_d" link2="pointer" reason="Never" />
+  <disable_collisions link1="lowerarm_preroll_u" link2="pointer" reason="Never" />
+  <disable_collisions link1="pointer" link2="shoulder" reason="Never" />
+  <disable_collisions link1="pointer" link2="shoulder_preroll" reason="Never" />
+  <disable_collisions link1="pointer" link2="upperarm" reason="Never" />
+  <disable_collisions link1="pointer" link2="upperarm_preroll" reason="Never" />
+  <disable_collisions link1="pointer" link2="wrist" reason="Adjacent" />
 </xacro:macro>
 
 
