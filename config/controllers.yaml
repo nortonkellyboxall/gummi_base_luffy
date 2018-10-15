@@ -10,8 +10,6 @@ controller_list:
       - elbow
       - forearm_roll
       - wrist_pitch
-      - head_yaw
-      - head_pitch
   
   - name: head_joint_trajectory_controller
     action_ns: follow_joint_trajectory

@@ -13,7 +13,3 @@ controller_list:
     joints:
       - head_yaw
       - head_pitch
-
-  - name: fake_pointer_controller
-    joints:
-      []
