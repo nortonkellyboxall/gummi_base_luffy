@@ -1,9 +1,19 @@
 <launch>
   <arg name="base" value="$(env ROS_GUMMI_BASE)" />
+  <arg name="head" value="$(env ROS_GUMMI_HEAD)" />
   <include file="$(eval find('gummi_base_' + base) + '/launch/manager.launch')">
     <!--arg name="base" value="$(arg base)"/-->
   </include>
   <include file="$(eval find('gummi_base_' + base) + '/launch/controllers.launch')">
+  </include>
+
+  <include file="$(eval find('gummi_interface') + '/launch/gummi.launch')">
+  </include>
+
+  <include file="$(eval find('gummi_head_' + head) + '/launch/gummi_head.launch')">
+  </include>
+
+  <include file="$(eval find('gummi_moveit') + '/launch/gummi_moveit.launch')">
   </include>
 
   <!-- <include file="$(find realsense2_camera)/launch/rs_rgbd.launch">

@@ -16,7 +16,7 @@ minAngle: -1.7
 maxAngle: 0.47
 maxAbsForwardError: 0.7
 gains:
-    P: 0.02
+    P: 0.04
     I: 0.00002
     D: 0.2
 restingPoseAngle: 0.0
