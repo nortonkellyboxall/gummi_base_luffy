@@ -9,22 +9,22 @@
                     <!-- Equivalent to /dev/ttyUSB1 can be find at /dev/serial/by-id -->
                     port_name: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL02L1KS-if00-port0 <!--/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052NDS-if00-port0" -->
                     baud_rate: 1000000
-                    min_motor_id: 12
-                    max_motor_id: 101
+                    min_motor_id: 1
+                    max_motor_id: 25
                     update_rate: 100
                 gummi_ae:
                     <!-- Equivalent to /dev/ttyUSB0 can be find at /dev/serial/by-id -->
                     port_name: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT1SF2VT-if00-port0 <!-- "/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052RCN-if00-port0" -->
                     baud_rate: 1000000
                     min_motor_id: 1
-                    max_motor_id: 25
+                    max_motor_id: 101
                     update_rate: 100
                 gummi_se:
                     <!-- Equivalent to /dev/ttyUSB0 can be find at /dev/serial/by-id -->
                     port_name: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL03ENF4-if00-port0 <!--"/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL02L1KJ-if00-port0"-->
                     baud_rate: 1000000
                     min_motor_id: 1
-                    max_motor_id: 8
+                    max_motor_id: 25
                     update_rate: 100
         </rosparam>
     </node>

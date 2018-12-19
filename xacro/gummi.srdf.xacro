@@ -35,8 +35,8 @@
     </group_state>
 
     <group_state name="dab" group="head">
-        <joint name="head_pitch" value="-0.6214" />
-        <joint name="head_yaw" value="-0.5524" />
+        <joint name="head_pitch" value="-0.6" />
+        <joint name="head_yaw" value="-0.2" />
     </group_state>
     <group_state name="dab" group="right_arm">
         <joint name="elbow" value="-0.75" />
