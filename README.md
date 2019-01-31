@@ -1,19 +1,28 @@
 # gummi_base_template
 
-This replaces the old gummi_description package, now separated into gummi_base_XXX and gummi_ee_XXX for easier change of end effectors.
+The Gummi Arm is split into multiple packages, this is because the designers wanted to maintain the ability for people to design their own versions of the arm and make various modifications such as the gripper type for example. Luffy, which is the ACRV's version of the Gummi Arm does have some changes and so it has its own versions of these packages. 
+
+The packages are as follows:
+- gummi_base_luffy
+- gummi_ee_luffy
+- gummi_head_twodof
+- gummi_interface
+- gummi_moveit
+
+The first three packages contain all of the URDF files and dynamixel configurations for each of their respective parts. 
 
 ## Setting-up
 
 First set up a workspace
 
-    $ mkdir -p catkin_ws/src
-    $ cd catkin_ws/src
+    $ mkdir -p <ROBOT-NAME>_ws/src
+    $ cd <ROBOT-NAME>/src
 
 Fork or clone this repository:
 
-`$ git clone https://github.com/GummiArmCE/gummi_base_template.git` 
+`$ git clone https://github.com/nortonkellyboxall/gummi_base_luffy.git` 
 
-Download a suitable ee package, e. g., handshake:
+Do the same for the forearm:
 
 `$ git clone https://github.com/GummiArmCE/gummi_ee_handshake.git`
 
