@@ -1,4 +1,5 @@
-# Introduction
+Introduction
+============
 The Gummi Arm is split into multiple packages, this is because the designers wanted to maintain the ability for people to design their own versions of the arm and make various modifications such as the gripper type for example. Luffy, which is the ACRV's version of the Gummi Arm does have some changes and so it has its own versions of these packages. 
 
 The packages are as follows:
