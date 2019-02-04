@@ -1,4 +1,5 @@
 <a href="#hardware">Click here to learn about the Hardware</a>
+------
 
 # Introduction
 Luffy is the ACRV version of the [Gummi Arm](https://github.com/GummiArmCE). This page serves to hopefully help you get set up and using the arm without too much hassle. 
@@ -15,7 +16,8 @@ The packages are as follows:
 
 Each of these packages are connected and required to be cloned or forked.
 
-<a id="hardware"> # Hardware </a>
+<a id="hardware"> Hardware </a>
+------
 The base package encapsulates the shoulder roll, shoulder yaw, shoulder pitch, upperarm roll, and elbow joints (as well as accompanying links). All of these joints except the upperarm roll are VSA joints, thus they contain two dynamixels and one dyamixel as an encoder. The encoder dynamixel does not have a gearbox and so only measures position, however since it is a dynamixel it allows it to be connected on the same bus as the driving motors. The links are all printed in nylon with the model able to be found in the gummi_hardware_luffy repo. 
 
 # Package layout
