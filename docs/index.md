@@ -14,7 +14,7 @@ Luffy is the ACRV version of the [Gummi Arm](https://github.com/GummiArmCE). Thi
 
 The Gummi Arm is split into multiple packages, this is because the designers wanted to maintain the ability for people to design their own versions of the arm and make various modifications such as the gripper type for example.
 
-<img src="../images/Gummi2.png" alt="Luffy"/>
+<img src="images/Gummi2.png" alt="Luffy"/>
 
 The packages are as follows:
 - gummi_base_luffy      [link to repo](https://github.com/nortonkellyboxall/gummi_base_luffy)
