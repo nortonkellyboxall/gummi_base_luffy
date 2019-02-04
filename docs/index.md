@@ -1,10 +1,15 @@
 <a href="#hardware">Click here to learn about the Hardware</a>
 ------
+
 <a href="#package layout">Click here to learn about the file layout in the package</a>
 ------
+
 <a href="#startup">Click here to learn about the how to start up the Gummi Arm</a>
 ------
-# Introduction
+
+Introduction
+======
+
 Luffy is the ACRV version of the [Gummi Arm](https://github.com/GummiArmCE). This page serves to hopefully help you get set up and using the arm without too much hassle. 
 
 The Gummi Arm is split into multiple packages, this is because the designers wanted to maintain the ability for people to design their own versions of the arm and make various modifications such as the gripper type for example.
