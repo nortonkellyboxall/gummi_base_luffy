@@ -2,7 +2,6 @@
   <arg name="base" value="$(env ROS_GUMMI_BASE)" />
   <arg name="head" value="$(env ROS_GUMMI_HEAD)" />
   <include file="$(eval find('gummi_base_' + base) + '/launch/manager.launch')">
-    <!--arg name="base" value="$(arg base)"/-->
   </include>
   <include file="$(eval find('gummi_base_' + base) + '/launch/controllers.launch')">
   </include>

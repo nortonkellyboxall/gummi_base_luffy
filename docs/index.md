@@ -17,12 +17,12 @@ The Gummi Arm is split into multiple packages, this is because the designers wan
 <img src="images/Gummi2.png" alt="Luffy"/>
 
 The packages are as follows:
-- gummi_base_luffy      [link to repo](https://github.com/nortonkellyboxall/gummi_base_luffy)
-- gummi_ee_luffy        [link to repo](https://github.com/nortonkellyboxall/gummi_ee_luffy)
-- gummi_head_twodof     [link to repo](https://github.com/nortonkellyboxall/gummi_head_twodof)
-- gummi_interface       [link to repo](https://github.com/nortonkellyboxall/gummi_interface)
-- gummi_moveit          [link to repo](https://github.com/nortonkellyboxall/gummi_moveit)
-- gummi_hardware_Luffy  [link to repo](https://github.com/nortonkellyboxall/gummi_hardware_Luffy)
+- [gummi_base_luffy](https://nortonkellyboxall.github.io/gummi_base_luffy/)
+- [gummi_ee_luffy](https://nortonkellyboxall.github.io/gummi_ee_luffy/)
+- [gummi_head_twodof](https://nortonkellyboxall.github.io/gummi_head_twodof/)
+- [gummi_interface](https://nortonkellyboxall.github.io/gummi_interface/)
+- [gummi_moveit](https://github.com/nortonkellyboxall/gummi_moveit)
+- [gummi_hardware_luffy](https://nortonkellyboxall.github.io/gummi_hardware_luffy/)
 
 Each of these packages are connected and required to be cloned or forked.
 
@@ -73,7 +73,7 @@ The manager.launch file contains the details for each of the three serial ports 
 ``` xml
 gummi_d:
     <!-- Equivalent to /dev/ttyUSB1 can be find at /dev/serial/by-id -->
-    port_name: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL02L1KS-if00-port0 <!--/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5052NDS-if00-port0" --> 
+    port_name: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL02L1KS-if00-port0 
     baud_rate: 1000000      #always set to 1000000 and make sure this is set when configuring the motor id number
     min_motor_id: 1         #sets the starting point for motor ids to be found on this bus
     max_motor_id: 25        #sets the finishing point for motor ids to be found on this bus
@@ -101,6 +101,57 @@ This folder contains the precurser to the URDF files. gummi_description_base.urd
 
 <a id = "startup"> Start Up </a>
 ======
+
+To get the Gummi Arm started first open a terminal and navigate to the workspace that contains all of the Gummi Arm packages. To set up this workspace click [here](http://wiki.ros.org/catkin/Tutorials/create_a_workspace) and ensure that all the required [dependencies](https://github.com/GummiArmCE/docs/wiki/Installing) have been installed. This is also assuming that the Gummi Arm has all its joints configured properly and the construction completed (details can be found here).
+
+Once in the workspace, source it using devel/setup.bash and then run roslaunch gummi_base_luffy all.launch. If everything has been built and installed properly this will run the arm through a startup routine and also open up moveit so that you can control the arm using Moveit's gui. Once this has been completed, you are free to run your code in another terminal (suggested that you use something like terminator, which splits terminals nicely).
+
+## Start up code breakdown
+This section will break down the all.launch file so that you know what the heck is going on.
+
+``` xml
+<launch>
+  <arg name="base" value="$(env ROS_GUMMI_BASE)" />
+  <arg name="head" value="$(env ROS_GUMMI_HEAD)" />
+```
+This is firstly declaring that when base or head is used that the environment variable assosciated to this gummi arm is used. If you dont change the environment variable then base will be luffy and head will be twodof. This is here since people might have different versions of the arm or different head arrangements.
+
+``` xml
+<include file="$(eval find('gummi_base_' + base) + '/launch/manager.launch')">
+</include>
+<include file="$(eval find('gummi_base_' + base) + '/launch/controllers.launch')">
+</include>
+ ```
+ This runs the manager.launch and controllers.launch files which are inside gummi_base_luffy. The manager.launch file finds all of the dynamixels on each of the buses. If you are having an issue here then make sure all of the motors are connected properly, also check that the baud rate for each motor is correct and that you are telling the launcher the correct bus to find the motor on. 
+
+ The controllers.launch file launches the controller files for gummi_base_luffy, gummi_ee_luffy, and gummi_head_twodof. 
+
+ ``` xml
+<include file="$(eval find('gummi_interface') + '/launch/gummi.launch')">
+</include>
+```
+This launches the gummi arm and runs it through it's start up routine. Ensure that before the launch file is run that the motors are turned so that there is a bit of tension in each of the joints (power must be off), this will ensure it always starts up fine and no tendons get caught. The functions available in the gummi interface package will be discussed further [here](https://nortonkellyboxall.github.io/gummi_interface/).
+
+``` xml
+<include file="$(eval find('gummi_head_' + head) + '/launch/gummi_head.launch')">
+</include>
+```
+This launches the camera on the gummi head as well as the second camera which is mounted remotely. It is a slightly modified version of the launch file in the realsense2_ros package. The main thing that has changed is that a depth topic that converts the depth into meters has been added.
+
+```xml
+<include file="$(eval find('gummi_moveit') + '/launch/gummi_moveit.launch')">
+</include>
+```
+
+This launches moveit for the gummi arm. 
+
+### Debugging
+If this launch file isnt working, it is a good idea to launch each of them separately starting at the top and going down. This will help you determine where the source of the error is. Some common errors that appear are
+- Power is not on so motors cant be found
+- Motor has cable disconnected 
+- Camera is not plugged in
+- Motors are on the incorrect bus in controllers.launch
+- Can't find the usb (make sure the right serial id is entered)
 
 
 
