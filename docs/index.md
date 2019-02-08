@@ -153,5 +153,23 @@ If this launch file isnt working, it is a good idea to launch each of them separ
 - Motors are on the incorrect bus in controllers.launch
 - Can't find the usb (make sure the right serial id is entered)
 
+Also some helpful tools that I have found are useful for things like understanding namespaces etc
+- rqt graph
+- rqt plot
+- rostopic echo /gummi/joint_states
+- RVIZ
+- rqt easy message publisher
 
+### Writing your own stuff
+Now you are ready to write your own stuff. To be able to command the gummi arm be sure to include this in your code
 
+``` python
+from gummi_interface.gummi import Gummi
+from gummi_interface.msg import CoContraction
+
+```
+The first one imports the gummi arm class which contains all of the functions such as move_to and set co-contraction. The second one is a custom message type that co-contration uses.
+
+It must be noted that at the moment, the dynamixels are quite slow on their read write. Each bus has 60Hz total to share across all the motors, so be concious of this when designing your algorithm. 
+
+To get a better understanding of how the Gummi class works then click [here](https://nortonkellyboxall.github.io/gummi_interface/).
