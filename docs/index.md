@@ -170,6 +170,6 @@ from gummi_interface.msg import CoContraction
 ```
 The first one imports the gummi arm class which contains all of the functions such as move_to and set co-contraction. The second one is a custom message type that co-contration uses.
 
-It must be noted that at the moment, the dynamixels are quite slow on their read write. Each bus has 60Hz total to share across all the motors, so be concious of this when designing your algorithm. 
+It must be noted that at the moment, the dynamixels are quite slow on their read write. Each bus has 60Hz total to share across all the motors, so be conscious of this when designing your algorithm. 
 
 To get a better understanding of how the Gummi class works then click [here](https://nortonkellyboxall.github.io/gummi_interface/).
